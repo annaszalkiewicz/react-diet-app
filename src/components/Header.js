@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Nav from "./Nav";
 
 const Header = () => {
   const [navIsOpen, toggleNav] = useState(false);
@@ -35,6 +36,7 @@ const Header = () => {
           <rect y="17" width="48" height="4" className="rect-3" style={{transform: 'rotate(-45deg)', transformOrigin: '50%'}} />
         </svg>
       )}
+      <Nav />
     </header>
   );
 };
