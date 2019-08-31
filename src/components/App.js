@@ -1,10 +1,11 @@
 import React from 'react';
 import '../sass/_App.scss';
+import Header from './Header';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      App component
+      <Header />
     </div>
   );
 }
