@@ -19,12 +19,6 @@ class Nav extends Component {
   
 };
 
-const mapStateToProps = state => {
-  return {
-    navIsOpen: state.uiReducer.isNavOpen
-  };
-};
-
 const mapDispatchToProps = dispatch => {
   return {
     toggleNav: () => dispatch(isNavOpen())
@@ -32,6 +26,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Nav);
