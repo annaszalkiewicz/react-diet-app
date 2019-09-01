@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
+import User from "./User";
 
 const Header = () => {
   const [navIsOpen, toggleNav] = useState(false);
@@ -53,7 +54,7 @@ const Header = () => {
           </React.Fragment>
         )}
       </div>
-      <div className="header_right"></div>
+      <User />
     </header>
   );
 };

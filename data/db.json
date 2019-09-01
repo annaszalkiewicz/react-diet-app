@@ -1,0 +1,9 @@
+{
+  "users": [
+    {
+      "firstName": "Olivia",
+      "lastName": "Wilde",
+      "avatar": "./src/assets/img/olivia-wilde.jpg"
+    }
+  ]
+}
