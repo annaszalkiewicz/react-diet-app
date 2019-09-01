@@ -11,6 +11,7 @@ import Dashboard from "./Dashboard";
 import Recipes from "./Recipes";
 import Challenge from "./Challenge";
 import Home from "./Home";
+import Footer from "./Footer";
 
 class App extends Component {
   componentDidMount = () => {
@@ -53,6 +54,8 @@ class App extends Component {
               render={() => <Challenge />}
             />
           </main>
+
+          <Footer />
         </div>
       </React.Fragment>
     );
