@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icon } from '@mdi/react';
+import { mdiChevronRight, mdiApple, mdiAndroid } from '@mdi/js';
 
 const Footer = () => {
   return (
@@ -13,6 +15,11 @@ const Footer = () => {
         <div className="footer_item--buttons">
           <Link to="#" className="button_primary">
             Buy now
+            <Icon
+              path={mdiChevronRight}
+              size={1}
+              color="#7c7c7c"
+            />
           </Link>
         </div>
       </div>
@@ -24,10 +31,30 @@ const Footer = () => {
         </p>
         <div className="footer_item--buttons">
           <Link to="#" className="button_primary">
+          <Icon
+              path={mdiApple}
+              size={1}
+              color="#7c7c7c"
+            />
             iOS
+            <Icon
+              path={mdiChevronRight}
+              size={1}
+              color="#7c7c7c"
+            />
           </Link>
           <Link to="#" className="button_primary">
+          <Icon
+              path={mdiAndroid}
+              size={1}
+              color="#7c7c7c"
+            />
             Android
+            <Icon
+              path={mdiChevronRight}
+              size={1}
+              color="#7c7c7c"
+            />
           </Link>
         </div>
       </div>
@@ -40,6 +67,11 @@ const Footer = () => {
         <div className="footer_item--buttons">
           <Link to="#" className="button_primary">
             Read FAQs
+            <Icon
+              path={mdiChevronRight}
+              size={1}
+              color="#7c7c7c"
+            />
           </Link>
         </div>
       </div>
