@@ -5,10 +5,8 @@ import rootReducer from './reducers/index';
 
 let composeEnhancers = compose;
 
-// eslint-disable-next-line no-undef
-if (__DEV__) {
-    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-}
+composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 
 const configureStore = () => {
   return createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
