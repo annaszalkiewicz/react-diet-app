@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { Redirect } from 'react-router';
- 
+import { Redirect } from "react-router";
+
 import { logIn } from "../store/actions/authActions";
 
 import "../sass/_App.scss";
@@ -13,7 +13,6 @@ import Challenge from "./Challenge";
 import Home from "./Home";
 
 class App extends Component {
-
   componentDidMount = () => {
     setTimeout(() => {
       this.props.onLogIn();
@@ -22,39 +21,43 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
+      <React.Fragment>
+        <Link to="#main" className="skipLink">
+          Skip to content
+        </Link>
 
-        <Route 
-          exact 
-          path={process.env.PUBLIC_URL + "/"} 
-          render={() => (
-          this.props.isLogin ? (
-            <Redirect to="/dashboard"/>
-          ) : (
-            <Home />
-          )
-        )}/>
-  
-        <Route
-          path={process.env.PUBLIC_URL + "/dashboard"}
-          render={() => <Dashboard />}
-        />
-  
-        <Route
-          path={process.env.PUBLIC_URL + "/recipes"}
-          render={() => <Recipes />}
-        />
-  
-        <Route
-          path={process.env.PUBLIC_URL + "/challenge"}
-          render={() => <Challenge />}
-        />
-      </div>
+        <div className="App">
+          <Header />
+
+          <main id="main">
+            <Route
+              exact
+              path={process.env.PUBLIC_URL + "/"}
+              render={() =>
+                this.props.isLogin ? <Redirect to="/dashboard" /> : <Home />
+              }
+            />
+
+            <Route
+              path={process.env.PUBLIC_URL + "/dashboard"}
+              render={() => <Dashboard />}
+            />
+
+            <Route
+              path={process.env.PUBLIC_URL + "/recipes"}
+              render={() => <Recipes />}
+            />
+
+            <Route
+              path={process.env.PUBLIC_URL + "/challenge"}
+              render={() => <Challenge />}
+            />
+          </main>
+        </div>
+      </React.Fragment>
     );
   }
-  
-};
+}
 
 const mapStateToProps = state => {
   return {
@@ -72,4 +75,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-

@@ -20,3 +20,12 @@ body {
   font-family: $helvetica;
   font-size: 14px;
 }
+
+a {
+  color: $textGray;
+  text-decoration: none;
+}
+:focus {
+  outline: 0;
+  box-shadow: $boxShadow;
+}
