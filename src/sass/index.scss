@@ -1,3 +1,6 @@
+@import './Fonts';
+@import './Variables';
+
 @import './App';
 @import './Home';
 @import './Nav';
@@ -11,4 +14,5 @@
 body {
   width: 100%;
   overflow-x: hidden;
+  font-family: $helvetica;
 }
