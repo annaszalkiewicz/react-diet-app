@@ -1,0 +1,26 @@
+@import './Variables';
+
+.header_menu {
+  width: 100%;
+  padding: 1em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 5em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+}
+.header_menu--item {
+  color: $textGray;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1.5em;
+  &.active {
+    color: $orange;
+  }
+}
