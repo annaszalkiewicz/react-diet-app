@@ -13,7 +13,7 @@
   bottom: 0;
   right: 0;
   background-color: $white;
-  transition: transform 0.3s ease;
+  animation: toggleNav 0.3s ease;
 }
 .header_menu--item {
   color: $textGray;
@@ -23,5 +23,14 @@
   font-size: 1.5em;
   &.active {
     color: $orange;
+  }
+}
+
+@keyframes toggleNav {
+  0% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
