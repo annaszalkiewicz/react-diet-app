@@ -1,10 +1,12 @@
-@import './Fonts';
-@import './Variables';
+@import './Fonts'; // Imports fonts
+@import './Variables'; //Imports defined variables
 
+//Import component styling
 @import './App';
 @import './Home';
 @import './Header';
 @import './Nav';
+@import './User';
 
 * {
   margin: 0;
@@ -16,4 +18,5 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: $helvetica;
+  font-size: 14px;
 }

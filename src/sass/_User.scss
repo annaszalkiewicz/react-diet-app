@@ -1,0 +1,30 @@
+@import './Variables';
+
+.header_right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header_right--avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: 1em;
+}
+.header_right--name {
+  display: none;
+  margin-right: 1em;
+}
+.header_right--icon {
+  cursor: pointer;
+}
+.avatar_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  .header_right--name {
+    display: block;
+  }
+}
