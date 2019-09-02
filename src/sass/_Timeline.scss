@@ -1,0 +1,38 @@
+@import './Variables';
+
+.timeline {
+  width: 100%;
+  font-size: 0.6em;
+  padding: 1em;
+}
+.timeline_heading {
+  text-transform: uppercase;
+  color: #bdbdbd;
+  margin: 1em 0;
+}
+.timeline_container {
+  display: flex;
+  flex-direction: row;
+  &::after {
+    content: "";
+    width: 230px;
+    height: 2px;
+    background: #dbdbdb;
+    display: block;
+    position: absolute;
+    margin-top: 1.2em;
+  }
+}
+.timeline_item {
+  margin: 2em 1.2em 0 0;
+  color: $darkTextGray;
+  &::after {
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    display: block;
+    margin-top: -3.5em;
+    background: #dbdbdb;
+  }
+}

@@ -7,6 +7,7 @@
 @import './Header';
 @import './Nav';
 @import './User';
+@import './Timeline';
 @import './Footer';
 
 * {
@@ -21,6 +22,7 @@ body {
   font-family: $helvetica;
   font-size: 14px;
   text-align: left;
+  background: $lightGray;
 }
 h2 {
   font-family: $helveticaMedium;
