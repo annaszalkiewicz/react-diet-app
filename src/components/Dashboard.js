@@ -1,9 +1,13 @@
-import React from 'react';
-import Timeline from './Timeline';
+import React from "react";
+import Timeline from "./Timeline";
+import Slider from "./Slider";
 
 const Dashboard = () => {
   return (
-    <Timeline />
+    <div className="dashboard_container">
+      <Timeline />
+      <Slider />
+    </div>
   );
 };
 
