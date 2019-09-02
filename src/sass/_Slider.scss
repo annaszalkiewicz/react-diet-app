@@ -1,0 +1,42 @@
+.slider {
+  width: 100%;
+  padding: 1em;
+}
+.slider_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+.slider_item {
+  display: none;
+}
+.slider_item--active {
+  display: block;
+}
+.button_prev, .button_next {
+  padding: 0.7em 0;
+  border: solid 1px #c0c0c0;
+}
+.button_prev {
+  margin-right: 3em;
+}
+.button_next {
+  margin-left: 3em;
+}
+
+.Rounded_Rectangle_2 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(192, 192, 192);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  left: 1402px;
+  top: 113px;
+  width: 28px;
+  height: 46px;
+  z-index: 8;
+}
