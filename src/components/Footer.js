@@ -13,7 +13,7 @@ const Footer = () => {
           aliquet.
         </p>
         <div className="footer_item--buttons">
-          <Link to="#" className="button_primary">
+          <Link to="#" className="button_primary footer_button">
             Buy now
             <Icon
               path={mdiChevronRight}
@@ -30,7 +30,7 @@ const Footer = () => {
           aliquet.
         </p>
         <div className="footer_item--buttons">
-          <Link to="#" className="button_primary">
+          <Link to="#" className="button_primary button_footer">
           <Icon
               path={mdiApple}
               size={0.8}
@@ -44,7 +44,7 @@ const Footer = () => {
               color="#7c7c7c"
             />
           </Link>
-          <Link to="#" className="button_primary">
+          <Link to="#" className="button_primary button_footer">
           <Icon
               path={mdiAndroid}
               size={0.8}
@@ -67,7 +67,7 @@ const Footer = () => {
           aliquet.
         </p>
         <div className="footer_item--buttons">
-          <Link to="#" className="button_primary">
+          <Link to="#" className="button_primary button_footer">
             Read FAQs
             <Icon
               path={mdiChevronRight}
