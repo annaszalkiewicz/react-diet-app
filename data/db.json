@@ -3,7 +3,12 @@
     {
       "firstName": "Olivia",
       "lastName": "Wilde",
-      "avatar": "./src/assets/img/olivia-wilde.jpg"
+      "avatar": "./src/assets/img/olivia-wilde.jpg",
+      "program": {
+        "startDate": "07/22/2019",
+        "endDate": "10/06/2019",
+        "weeks": 12
+      }
     }
   ]
 }
