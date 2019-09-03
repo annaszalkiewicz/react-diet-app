@@ -1,8 +1,16 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 import { Icon } from "@mdi/react";
 import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 
+import { setCurrentWeek } from '../store/actions/userActions';
+
 class Slider extends Component {
+
+  componentDidMount = () => {
+    this.props.setCurrentWeek();
+  };
+  
   render() {
     return (
       <section className="slider">
@@ -29,4 +37,16 @@ class Slider extends Component {
   }
 }
 
-export default Slider;
+const mapStateToProps = state => {
+  return {
+    currentWeek: state.userReducer.currentWeek
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setCurrentWeek: () => dispatch(setCurrentWeek())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Slider);
