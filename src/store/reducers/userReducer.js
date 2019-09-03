@@ -1,8 +1,9 @@
-import { SET_CURRENT_WEEK } from '../actions/actionTypes';
+import { SET_CURRENT_WEEK, SET_PLAN_DURATION } from '../actions/actionTypes';
 import data from '../../data/db.json';
 
 const initialState = {
-  currentWeek: 1
+  currentWeek: null,
+  weeks: []
 }
 
 const userReducer = (state = initialState, action) => {
@@ -13,6 +14,14 @@ const userReducer = (state = initialState, action) => {
       ...state,
       currentWeek: Math.floor((Date.now() - Date.parse(data.users[0].program.startDate)) / 604800000 + 1)
     };
+
+  case SET_PLAN_DURATION:
+    return {
+      ...state,
+      weeks: [...Array(data.users[0].program.duration)].map((v, i) => {
+        return i+1;
+      })
+      }
 
   default:
     return state
