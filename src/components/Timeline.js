@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 
 class Timeline extends Component {
+
   render() {
     return (
       <section className="timeline">
@@ -48,4 +50,11 @@ class Timeline extends Component {
   }
 }
 
-export default Timeline;
+const mapStateToProps = state => {
+  return {
+    currentWeek: state.userReducer.currentWeek,
+    weeks: state.userReducer.weeks
+  }
+}
+
+export default connect(mapStateToProps, null)(Timeline);
