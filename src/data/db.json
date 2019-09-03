@@ -8,7 +8,79 @@
         "startDate": "07/22/2019",
         "endDate": "10/06/2019",
         "duration": 12
-      }
+      },
+      "mealPlan": {
+        "meals-hours": [
+          "6:00 AM", 
+          "9:00 AM", 
+          "12:00 PM",
+          "3:00 PM",
+          "6:00 PM"
+        ],
+        "day-64": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Ham and Swiss Roll ups",
+            "Turkey Melt",
+            "Bod•&#275; Burn with Mozarella and Tomato Slices",
+            "Turkey Melt"
+          ],
+          "low-carb": true
+        } ,
+        "day-65": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Ham and Swiss Roll ups",
+            "Turkey Melt",
+            "Bod•&#275; Burn with Mozarella and Tomato Slices",
+            "Turkey Melt"
+          ],
+          "low-carb": true
+        },
+        "day-66": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Grilled Steak (HC)",
+            "Bod•&#275; Shake",
+            "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
+            "Garlic Lime Chicken (HC)"
+          ],
+          "low-carb": false
+        },
+        "day-67": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Ham and Swiss Roll ups",
+            "Turkey Melt",
+            "Bod•&#275; Burn with Mozarella and Tomato Slices",
+            "Turkey Melt"
+          ],
+          "low-carb": true
+        }, 
+        "day-68": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Ham and Swiss Roll ups",
+            "Bod•&#275; Shake",
+            "Bod•&#275; Burn with Mozarella and Tomato Slices",
+            "Turkey Melt"
+          ],
+          "low-carb": true
+        }, 
+        "day-69": {
+          "meals": [
+            "Bod•&#275; Shake",
+            "Grilled Steak (HC)",
+            "Bod•&#275; Shake",
+            "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
+            "Garlic Lime Chicken (HC)"
+          ],
+          "low-carb": false
+        },
+        "day-70": {
+          "free": true
+        } 
+      } 
     }
   ]
 }
