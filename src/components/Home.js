@@ -11,7 +11,7 @@ const Home = () => {
           path={mdiReload}
           size={2}
           color="#ff811c"
-          spin={1}s
+          spin={1}
         />
       </p>
     </div>
