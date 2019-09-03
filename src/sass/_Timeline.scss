@@ -17,15 +17,6 @@
 .timeline_container {
   display: flex;
   flex-direction: row;
-  // &::after {
-  //   content: "";
-  //   width: 230px;
-  //   height: 2px;
-  //   background: #dbdbdb;
-  //   display: block;
-  //   position: absolute;
-  //   margin-top: 1.2em;
-  // }
 }
 .timeline_item {
   position: relative;
@@ -38,16 +29,13 @@
   display: block;
   width: 3em;
   height: 2px;
-  background: $darkTextGray;
+  background: '#dbdbdb';
   top: 4px;
   right: 0px;
-  &:first-child(1) {
-    display: none;
-  }
+  z-index: -1;
 }
 .timeline_circle {
   width: 10px;
   height: 10px;
-  background: $darkTextGray;
   border-radius: 50%;
 }
