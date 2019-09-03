@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router";
 
 import { logIn } from "../store/actions/authActions";
+import { setPlanDuration } from '../store/actions/userActions';
 
 import "../sass/_App.scss";
 import Header from "./Header";
@@ -18,6 +19,7 @@ class App extends Component {
     setTimeout(() => {
       this.props.onLogIn();
     }, 1000);
+    this.props.setPlanDuration();
   };
 
   render() {
@@ -64,13 +66,15 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    isLogin: state.authReducer.isLogin
+    isLogin: state.authReducer.isLogin,
+    weeks: state.userReducer.weeks
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onLogIn: () => dispatch(logIn())
+    onLogIn: () => dispatch(logIn()),
+    setPlanDuration: () => dispatch(setPlanDuration())
   };
 };
 
