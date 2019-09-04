@@ -8,7 +8,7 @@ import data from "../../data/db.json";
 const initialState = {
   currentWeek: null,
   weeks: [],
-  mealPlan: {}
+  mealPlan: data.users[0].mealPlan
 };
 
 const userReducer = (state = initialState, action) => {
@@ -36,6 +36,7 @@ const userReducer = (state = initialState, action) => {
         ...state,
         mealPlan: data.users[0].mealPlan
       };
+
     default:
       return state;
   }
