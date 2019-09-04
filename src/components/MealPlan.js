@@ -18,13 +18,16 @@ class MealPlan extends Component {
               return (
                 <div
                   className={
-                    (new Date('1970-01-01T' + hour).getHours() >= 12)
+                    new Date("1970-01-01T" + hour).getHours() >= 12
                       ? "mealPlan_hour--pm mealPlan_hour"
                       : "mealPlan_hour--am mealPlan_hour"
                   }
                   key={hour}
                 >
-                  {new Date('1970-01-01T' + hour).getHours() + ":" + new Date('1970-01-01T' + hour).getMinutes() + "0"}
+                  {new Date("1970-01-01T" + hour).getHours() +
+                    ":" +
+                    new Date("1970-01-01T" + hour).getMinutes() +
+                    "0"}
                 </div>
               );
             })}
