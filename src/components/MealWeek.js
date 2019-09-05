@@ -33,12 +33,10 @@ class MealWeek extends Component {
                       <img src={smile} alt="Smile" />
                     </div>
                   </div>
-                  <div className="mealPlan_print">
-                    <div className="print_item">
+                  <button className="mealPlan_print">
                       <img src={print} alt="Print page"/>
                       <h3>Print</h3>
-                    </div>
-                  </div>
+                  </button>
                 </React.Fragment>
               )}
               <div

@@ -13,20 +13,31 @@
   text-transform: uppercase;
   border-right: solid 1px #dbdbdb;
 }
+.mealPlan_heading--last {
+  border-top-right-radius: 5px;
+}
 .mealPlan_day {
+  position: relative;
   border-right: solid 1px #dbdbdb;
   width: 128px;
+  &:nth-last-child(1) {
+    border-top-right-radius: 5px;
+  }
 }
 .mealPlan_meal {
   width: 100%;
   height: 90px;
   display: flex;
   justify-content: left;
-  background: $white;
+  background-color: $white;
   padding: 0.85em 0.85em 0 0.85em;
   font-size: 0.9em;
   color: $darkTextGray;
   border-top: solid 1px #dbdbdb;
+}
+.mealPlan_shake {
+  background: center bottom no-repeat url('../assets/img/shake.png');
+  filter: grayscale(1);
 }
 .mealPlan_carb {
   width: 100%;
@@ -75,5 +86,25 @@
   }
   img {
     transform: rotate(90deg);
+  }
+}
+.mealPlan_print {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 128px;
+  height: 80px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  color: $darkTextGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/img/table_background_hour.jpg');
+  img {
+    margin-right: 0.5em;
+  }
+  h3 {
+    margin-left: 0.5em;
   }
 }
