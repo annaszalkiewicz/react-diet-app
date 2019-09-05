@@ -91,7 +91,7 @@
           {
             "day": 70,
             "meals": [],
-            "lowCarb": false,
+            "lowCarb": null,
             "free": true
           }
         ]

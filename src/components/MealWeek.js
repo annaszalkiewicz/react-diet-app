@@ -47,10 +47,11 @@ class MealWeek extends Component {
                       " mealPlan_meal mealPlan_shake"
                     : "mealPlan_day--" + day.day + " mealPlan_meal"
                 }
+                style={{display: day.free ? 'none' : 'block'}}
               >
                 {day.meals[0]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
+              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
                 {day.meals[1]}
               </div>
               <div
@@ -61,16 +62,17 @@ class MealWeek extends Component {
                       " mealPlan_meal mealPlan_shake"
                     : "mealPlan_day--" + day.day + " mealPlan_meal"
                 }
+                style={{display: day.free ? 'none' : 'block'}}
               >
                 {day.meals[2]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
+              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
                 {day.meals[3]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
+              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
                 {day.meals[4]}
               </div>
-              <div className="mealPlan_carb">
+              <div className="mealPlan_carb" style={{display: day.free ? 'none' : 'block'}}>
                 {day.lowCarb && (
                   <div className="mealPlan_carb--low">low-carb</div>
                 )}
@@ -78,7 +80,7 @@ class MealWeek extends Component {
                   <div className="mealPlan_carb--low">high-carb</div>
                 )}
               </div>
-              <div className={"mealPlan_workout"}>
+              <div className="mealPlan_workout" style={{display: day.free ? 'none' : 'flex'}}>
                 <div className="mealPlan_workout--icon">
                   <img src={workout} alt="Workout" />
                 </div>
