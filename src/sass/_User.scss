@@ -16,6 +16,10 @@
 }
 .header_right--icon {
   cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover, &:focus {
+    color: $orange;
+  }
 }
 .avatar_image {
   width: 100%;
