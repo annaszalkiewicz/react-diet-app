@@ -25,7 +25,8 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
-            "lowCarb": true
+            "lowCarb": true,
+            "free": false
           },
           {
             "day": 65,
@@ -36,7 +37,8 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
-            "lowCarb": true
+            "lowCarb": true,
+            "free": false
           },
           {
             "day": 66,
@@ -47,7 +49,8 @@
               "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
               "Garlic Lime Chicken (HC)"
             ],
-            "lowCarb": false
+            "lowCarb": false,
+            "free": false
           },
           {
             "day": 67,
@@ -58,7 +61,8 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
-            "lowCarb": true
+            "lowCarb": true,
+            "free": false
           },
           {
             "day": 68,
@@ -69,7 +73,8 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
-            "lowCarb": true
+            "lowCarb": true,
+            "free": false
           },
           {
             "day": 69,
@@ -80,7 +85,14 @@
               "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
               "Garlic Lime Chicken (HC)"
             ],
-            "lowCarb": false
+            "lowCarb": false,
+            "free": false
+          },
+          {
+            "day": 70,
+            "meals": [],
+            "lowCarb": false,
+            "free": true
           }
         ]
       }
