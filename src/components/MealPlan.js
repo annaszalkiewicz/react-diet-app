@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { getMealPlan } from "../store/actions/userActions";
+import MealHours from "./MealHours";
 
 class MealPlan extends Component {
   componentDidMount = () => {
@@ -13,30 +14,11 @@ class MealPlan extends Component {
     return (
       <section className="mealPlan">
         <div className="mealPlan_container">
-          <div className="mealPlan_hours">
-            <div className="mealPlan_hours--empty"></div>
-            {mealPlan.mealHours.map(hour => {
-              return (
-                <div
-                  className={
-                    new Date("1970-01-01T" + hour).getHours() >= 12
-                      ? "mealPlan_hour--pm mealPlan_hour"
-                      : "mealPlan_hour--am mealPlan_hour"
-                  }
-                  key={hour}
-                >
-                  {new Date("1970-01-01T" + hour).getHours() +
-                    ":" +
-                    new Date("1970-01-01T" + hour).getMinutes() +
-                    "0"}
-                </div>
-              );
-            })}
-          </div>
+          <MealHours />
 
           {mealPlan.week.map(day => {
             return (
-              <div className="mealPlan_day"key={day.day}>
+              <div className="mealPlan_day" key={day.day}>
                 <div className="mealPlan_heading">Day {day.day}</div>
                 <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
                   {day.meals[0]}
