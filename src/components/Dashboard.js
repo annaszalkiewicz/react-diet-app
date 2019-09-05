@@ -6,6 +6,7 @@ import Slider from "./Slider";
 import MealPlan from "./MealPlan";
 
 import { setPlanDuration, setCurrentWeek } from '../store/actions/userActions';
+import ProteinOptions from "./ProteinOptions";
 
 class Dashboard extends Component {
 
@@ -19,6 +20,7 @@ class Dashboard extends Component {
       <div className="dashboard_container">
         <Timeline />
         <Slider />
+        <ProteinOptions />
         <MealPlan />
       </div>
     );
