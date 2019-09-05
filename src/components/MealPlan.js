@@ -37,7 +37,7 @@ class MealPlan extends Component {
           {mealPlan.week.map(day => {
             return (
               <div className="mealPlan_day"key={day.day}>
-                <div className="mealPlan_heading">{day.day}</div>
+                <div className="mealPlan_heading">Day {day.day}</div>
                 <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
                   {day.meals[0]}
                 </div>
@@ -52,9 +52,6 @@ class MealPlan extends Component {
                 </div>
                 <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
                   {day.meals[4]}
-                </div>
-                <div className={"mealPlan_day--" + day.day + " mealPlan_meal"}>
-                  {day.meals[5]}
                 </div>
                 <div className="mealPlan_carb">
                   {day.lowCarb && (
