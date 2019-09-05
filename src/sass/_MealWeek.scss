@@ -27,3 +27,16 @@
   color: $darkTextGray;
   border-top: solid 1px #dbdbdb;
 }
+.mealPlan_carb {
+  width: 100%;
+  height: 40px;
+  background: $tableBackground;
+  color: $darkTextGray;
+}
+.mealPlan_carb--low {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
