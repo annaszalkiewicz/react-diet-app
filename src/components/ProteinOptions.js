@@ -19,26 +19,26 @@ class ProteinOptions extends Component {
           Select your protein options
         </h3>
         <div className="options_buttons">
-          <div className="options_vegetable">
+          <button className="options_button">
             <img src={vegetable} alt="Vegetable option enabled" className="options_vegetable--active" />
             <img src={vagetableDisabled} alt="Vegetable option disabled" className="options_vegetable--inactive" />
-          </div>
-          <div className="options_vegetable">
+          </button>
+          <button className="options_button">
             <img src={dairy} alt="Dairy option enabled" className="options_vegetable--active" />
             <img src={dairyDisabled} alt="Dairy option disabled" className="options_vegetable--inactive" />
-          </div>
-          <div className="options_vegetable">
+          </button>
+          <button className="options_button">
             <img src={beef} alt="Beef option enabled" className="options_vegetable--active" />
             <img src={beefDisabled} alt="Beef option disabled" className="options_vegetable--inactive" />
-          </div>
-          <div className="options_vegetable">
+          </button>
+          <button className="options_button">
             <img src={fish} alt="Fish option enabled" className="options_vegetable--active" />
             <img src={fishDisabled} alt="Fish option disabled" className="options_vegetable--inactive" />
-          </div>
-          <div className="options_vegetable">
+          </button>
+          <button className="options_button">
             <img src={chicken} alt="Chicken option enabled" className="options_vegetable--active" />
             <img src={chickenDisabled} alt="Chicken option disabled" className="options_vegetable--inactive" />
-          </div>
+          </button>
         </div>
       </section>
     )

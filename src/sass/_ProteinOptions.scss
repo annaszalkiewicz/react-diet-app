@@ -1,0 +1,27 @@
+@import './Variables';
+
+.options {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options_header {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  color: #bdbdbd;
+  margin: 1em 0;
+}
+.options_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+}
+.options_button {
+  background: none;
+  border: none;
+  margin: 0 0.5em;
+}
