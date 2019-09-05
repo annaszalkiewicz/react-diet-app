@@ -6,34 +6,29 @@
   padding: 1em;
 }
 .mealPlan_container {
-  display: grid;
-  grid-template-columns: 85px repeat(7, 126px);
-  grid-template-rows: 50px repeat(5, 90px) repeat(2, 30px);
-  justify-content: center;
   width: 980px;
   margin: auto;
   background: #e9e9e9;
+  display: flex;
+  justify-content: left;
 }
 .mealPlan_hours {
-  grid-area: 2 / 1 / span 5 / span 1;
-  display: grid;
-  grid-template-columns: 85px;
-  grid-template-rows: repeat(5, 90px);
-  background: left top no-repeat url('../assets/img/table_background_left.jpg') content-box;
-  font-family: $helveticaBold;
-  font-size: 13px;
-  color: $darkTextGray;
-  margin: 0 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
 }
-
-@for $i from 1 through 5 {
-  .mealPlan_hour:nth-child(#{$i}) {
-    display: block;
-    grid-area: #{$i} / 1 / span 1/ span 1;
-    justify-self: center;
-    align-self: center;
-    background: $white;
-  }
+.mealPlan_hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+}
+.mealPlan_hours--empty {
+  width: 100%;
+  height: 50px;
 }
 .mealPlan_hour--am {
   &::after {
