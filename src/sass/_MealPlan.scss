@@ -42,3 +42,31 @@
     font-family: $helveticaLight;
   }
 }
+.mealPlan_day {
+  width: 126px;
+  margin: 1px;
+}
+.mealPlan_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 126px;
+  height: 50px;
+  background: $white;
+  margin: 1px;
+  font-family: $helveticaMedium;
+  font-size: 1.7em;
+  color: $green;
+  text-transform: uppercase;
+}
+.mealPlan_meal {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: left;
+  background: $white;
+  margin: 1px;
+  padding: 0.85em 0.85em 0 0.85em;
+  font-size: 0.9em;
+  color: $darkTextGray;
+}
