@@ -1,0 +1,29 @@
+@import './Variables';
+
+.mealPlan_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 126px;
+  height: 50px;
+  background: $white;
+  font-family: $helveticaMedium;
+  font-size: 1.7em;
+  color: $green;
+  text-transform: uppercase;
+  border-right: solid 1px #dbdbdb;
+}
+.mealPlan_day {
+  border-right: solid 1px #dbdbdb;
+}
+.mealPlan_meal {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: left;
+  background: $white;
+  padding: 0.85em 0.85em 0 0.85em;
+  font-size: 0.9em;
+  color: $darkTextGray;
+  border-top: solid 1px #dbdbdb;
+}
