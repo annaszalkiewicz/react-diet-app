@@ -22,6 +22,8 @@
   width: 100%;
   height: 50px;
   background: $tableBackground;
+  border-top-left-radius: 5px;
+
 }
 .mealPlan_hours--small {
   width: 100%;
@@ -36,6 +38,7 @@
 }
 .mealPlan_hours--workout {
   border-top: solid 1px #dbdbdb;
+  border-bottom-left-radius: 5px;
 }
 .mealPlan_hours--icon {
   color: $darkTextGray;
