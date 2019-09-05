@@ -6,7 +6,11 @@ import smile from "../assets/img/emoticon-smile.png";
 import print from '../assets/img/print-icon.png';
 
 class MealWeek extends Component {
-  componentDidMount = () => {};
+
+  printHandler = () => {
+    window.print();
+  }
+
   render() {
     const { mealPlan } = this.props;
     return (
@@ -33,7 +37,7 @@ class MealWeek extends Component {
                       <img src={smile} alt="Smile" />
                     </div>
                   </div>
-                  <button className="mealPlan_print">
+                  <button className="mealPlan_print" onClick={this.printHandler}>
                       <img src={print} alt="Print page"/>
                       <h3>Print</h3>
                   </button>
