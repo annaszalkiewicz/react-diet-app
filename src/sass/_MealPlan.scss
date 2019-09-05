@@ -12,39 +12,8 @@
   display: flex;
   justify-content: left;
 }
-.mealPlan_hours {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-}
-.mealPlan_hour {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 90px;
-}
-.mealPlan_hours--empty {
-  width: 100%;
-  height: 50px;
-}
-.mealPlan_hour--am {
-  &::after {
-    content: " AM";
-    font-family: $helveticaLight;
-  }
-}
-.mealPlan_hour--pm {
-  &::after {
-    content: " PM";
-    font-family: $helveticaLight;
-  }
-}
 .mealPlan_day {
   width: 126px;
-  margin: 1px;
 }
 .mealPlan_heading {
   display: flex;
@@ -53,7 +22,6 @@
   width: 126px;
   height: 50px;
   background: $white;
-  margin: 1px;
   font-family: $helveticaMedium;
   font-size: 1.7em;
   color: $green;
@@ -65,7 +33,6 @@
   display: flex;
   justify-content: left;
   background: $white;
-  margin: 1px;
   padding: 0.85em 0.85em 0 0.85em;
   font-size: 0.9em;
   color: $darkTextGray;

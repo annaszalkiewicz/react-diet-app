@@ -1,0 +1,56 @@
+@import './Variables';
+
+.mealPlan_hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+}
+.mealPlan_hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  color: $darkTextGray;
+  font-family: $helveticaBold;
+  background: $tableBackground;
+  border-top: solid 1px #dbdbdb;
+}
+.mealPlan_hours--empty {
+  width: 100%;
+  height: 50px;
+  background: $tableBackground;
+}
+.mealPlan_hours--small {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: $darkTextGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $tableBackground;
+}
+.mealPlan_hours--workout {
+  border-top: solid 1px #dbdbdb;
+}
+.mealPlan_hours--icon {
+  color: $darkTextGray;
+}
+.mealPlan_hour--am {
+  &::after {
+    content: "AM";
+    font-family: $helveticaLight;
+    margin-left: 0.2em;
+  }
+}
+.mealPlan_hour--pm {
+  &::after {
+    content: "PM";
+    font-family: $helveticaLight;
+    margin-left: 0.2em;
+  }
+}
