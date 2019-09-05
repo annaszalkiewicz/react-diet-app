@@ -1,6 +1,6 @@
 @import './Variables';
 
-.header_menu {
+.header_menu--open {
   width: 100%;
   padding: 1em;
   position: absolute;
@@ -13,8 +13,26 @@
   bottom: 0;
   right: 0;
   background-color: $white;
-  animation: toggleNav 0.3s ease;
   z-index: 1;
+  transform: translateX(0);
+  animation: openNav 0.3s ease;
+}
+.header_menu--closed {
+  width: 100%;
+  padding: 1em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 4em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $white;
+  z-index: 1;
+  transform: translateX(-1000px);
+  animation: closeNav 0.3s ease;
 }
 .header_menu--item {
   text-transform: uppercase;
@@ -25,12 +43,37 @@
     color: $orange;
   }
 }
-
-@keyframes toggleNav {
+@keyframes openNav {
   0% {
     transform: translateX(-1000px);
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes closeNav {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+@media screen and (min-width: 980px) {
+  .header_menu--closed {
+    position: static;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    background: none;
+    padding: 0
+  }
+  .header_menu--item {
+    padding: 0 1em;
   }
 }

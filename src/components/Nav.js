@@ -9,7 +9,7 @@ class Nav extends Component {
   render() {
    
     return (
-      <nav className="header_menu" onClick={this.props.toggleNav}>
+      <nav className={this.props.navIsOpen ? "header_menu--open" : "header_menu--closed"} onClick={this.props.toggleNav}>
         <NavLink exact to="/dashboard" className="header_menu--item">Dashboard</NavLink>
         <NavLink exact to="/recipes" className="header_menu--item">Recipes</NavLink>
         <NavLink exact to="/challenge" className="header_menu--item">Challenge</NavLink>
@@ -19,6 +19,12 @@ class Nav extends Component {
   
 };
 
+const mapStateToProps = state => {
+  return {
+    navIsOpen: state.uiReducer.isNavOpen
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     toggleNav: () => dispatch(isNavOpen())
@@ -26,6 +32,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Nav);
