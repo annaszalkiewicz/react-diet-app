@@ -14,7 +14,7 @@ class MealWeek extends Component {
   render() {
     const { mealPlan } = this.props;
     return (
-      <React.Fragment>
+      <div className="mealPlan_overflow">
         {mealPlan.week.map(day => {
           return (
             <div className="mealPlan_day" key={day.day}>
@@ -92,7 +92,7 @@ class MealWeek extends Component {
             </div>
           );
         })}
-      </React.Fragment>
+      </div>
     );
   }
 }

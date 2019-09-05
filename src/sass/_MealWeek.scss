@@ -16,6 +16,11 @@
 .mealPlan_heading--last {
   border-top-right-radius: 5px;
 }
+.mealPlan_overflow {
+  display: flex;
+  width: 256px;
+  overflow-x: auto;
+}
 .mealPlan_day {
   position: relative;
   border-right: solid 1px #dbdbdb;
