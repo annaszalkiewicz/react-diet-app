@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 126px;
+  width: 128px;
   height: 50px;
   background: $white;
   font-family: $helveticaMedium;
@@ -15,6 +15,7 @@
 }
 .mealPlan_day {
   border-right: solid 1px #dbdbdb;
+  width: 128px;
 }
 .mealPlan_meal {
   width: 100%;
@@ -49,4 +50,30 @@
   height: 40px;
   border-top: solid 1px #dbdbdb;
   color: $darkTextGray;
+}
+.mealPlan_free {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 128px;
+  background: #fff;
+  border-bottom: solid 1px #dbdbdb;
+  border-right: solid 1px #dbdbdb;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  margin-top: 450px;
+}
+.free_item {
+  margin: 0 2em;
+  h2 {
+    font-family: $helveticaLight;
+    color: #c2c2c2;
+  }
+  img {
+    transform: rotate(90deg);
+  }
 }
