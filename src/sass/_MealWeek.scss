@@ -64,16 +64,13 @@
     color: $black;
   }
 }
-.mealPlan_meal--completed {
-  display: none;
-  filter: grayscale(0);
-}
 .mealPlan_shake {
   background: center bottom no-repeat url('../assets/img/shake.png');
   filter: grayscale(1);
-  .mealPlan_meal--completed {
-    filter: grayscale(0);
-  }
+
+}
+.mealPlan_meal--completed {
+  filter: grayscale(0);
 }
 .mealPlan_carb {
   width: 100%;

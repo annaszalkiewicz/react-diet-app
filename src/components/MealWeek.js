@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import workout from "../assets/img/table-workout-icon.png";
-import workoutCheck from '../assets/img/workout-check.png';
+import workoutCheck from "../assets/img/workout-check.png";
 import smile from "../assets/img/emoticon-smile.png";
 import print from "../assets/img/print-icon.png";
-import check from '../assets/img/check.png';
+import check from "../assets/img/check.png";
 
 class MealWeek extends Component {
   state = {
-    isToday: 65
+    isToday: 65,
+    workoutCompleted: false
   };
 
   printHandler = () => {
@@ -70,7 +71,13 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 {day.meals[0]}
-                <img src={check} alt="Completed" className="mealPlan_meal--completed" />
+                {day.mealsCompleted[0] === true && (
+                  <img
+                    src={check}
+                    alt="Completed"
+                    className="mealPlan_meal--completed"
+                  />
+                )}
               </div>
               <div
                 role="button"
@@ -78,8 +85,13 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 {day.meals[1]}
-                <img src={check} alt="Completed" className="mealPlan_meal--completed" />
-
+                {day.mealsCompleted[1] === true && (
+                  <img
+                    src={check}
+                    alt="Completed"
+                    className="mealPlan_meal--completed"
+                  />
+                )}
               </div>
               <div
                 role="button"
@@ -93,8 +105,13 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 {day.meals[2]}
-                <img src={check} alt="Completed" className="mealPlan_meal--completed" />
-
+                {day.mealsCompleted[2] === true && (
+                  <img
+                    src={check}
+                    alt="Completed"
+                    className="mealPlan_meal--completed"
+                  />
+                )}
               </div>
               <div
                 role="button"
@@ -102,8 +119,13 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 {day.meals[3]}
-                <img src={check} alt="Completed" className="mealPlan_meal--completed" />
-
+                {day.mealsCompleted[3] === true && (
+                  <img
+                    src={check}
+                    alt="Completed"
+                    className="mealPlan_meal--completed"
+                  />
+                )}
               </div>
               <div
                 role="button"
@@ -111,8 +133,13 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 {day.meals[4]}
-                <img src={check} alt="Completed" className="mealPlan_meal--completed" />
-
+                {day.mealsCompleted[4] === true && (
+                  <img
+                    src={check}
+                    alt="Completed"
+                    className="mealPlan_meal--completed"
+                  />
+                )}
               </div>
               <div
                 className="mealPlan_carb"
@@ -128,9 +155,13 @@ class MealWeek extends Component {
               <div
                 className="mealPlan_workout"
                 style={{ display: day.free ? "none" : "flex" }}
+                onClick={this.onWorkOutCompleted}
               >
                 <div className="mealPlan_workout--icon">
-                  <img src={(day.workout) ? workoutCheck : workout} alt="Workout" />
+                  <img
+                    src={day.workout ? workoutCheck : workout}
+                    alt="Workout"
+                  />
                 </div>
               </div>
             </div>
