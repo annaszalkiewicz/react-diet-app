@@ -33,6 +33,10 @@
 .mealPlan_day--today {
   border: solid 2px $orange;
   box-sizing: content-box;
+  .mealPlan_heading {
+    height: 48px;
+    color: $orange;
+  }
 }
 .mealPlan_meal {
   width: 100%;
