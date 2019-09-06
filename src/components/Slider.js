@@ -6,9 +6,7 @@ import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 class Slider extends Component {
   state = {
     slides: document.getElementsByClassName("slider_item"),
-    activeIndex: 7,
-    hideNextButton: false,
-    hidePrevButton: false
+    activeIndex: 7
   };
 
   componentDidMount = () => {};
@@ -17,18 +15,6 @@ class Slider extends Component {
     e.preventDefault();
 
     let index = this.state.activeIndex;
-    let { slides } = this.state;
-    let slidesLength = slides.length;
-
-    if (index === slidesLength-1) {
-      this.setState({
-        hideNextButton: true
-      })
-    } else {
-      this.setState({
-        hideNextButton: false
-      })
-    }
 
     ++index;
 
@@ -36,23 +22,11 @@ class Slider extends Component {
       activeIndex: index
     });
 
-
   };
 
   showPrevSlide = e => {
     e.preventDefault();
     let index = this.state.activeIndex;
-    console.log(index === 2);
-    
-    if (index === 2) {
-      this.setState({
-        hidePrevButton: true
-      })
-    } else {
-      this.setState({
-        hidePrevButton: false
-      })
-    }
 
     --index;
 
@@ -70,12 +44,13 @@ class Slider extends Component {
             className="button_prev button_primary"
             id="button_prev"
             onClick={e => this.showPrevSlide(e)}
+            style={{ display: this.state.activeIndex <=1 ? "none" : "block" }}
           >
             <Icon
               path={mdiChevronLeft}
               size={1}
               color="#828282"
-              style={{ display: this.state.hidePrevButton ? "none" : "block" }}
+
             />
           </button>
 
@@ -99,12 +74,13 @@ class Slider extends Component {
             className="button_next button_primary"
             id="button_next"
             onClick={e => this.showNextSlide(e)}
+            style={{ display: this.state.activeIndex>=12 ? "none" : "block" }}
           >
             <Icon
               path={mdiChevronRight}
               size={1}
               color="#828282"
-              style={{ display: this.state.hideNextButton ? "none" : "block" }}
+
             />
           </button>
         </div>
