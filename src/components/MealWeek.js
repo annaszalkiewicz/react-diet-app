@@ -6,7 +6,6 @@ import smile from "../assets/img/emoticon-smile.png";
 import print from "../assets/img/print-icon.png";
 
 class MealWeek extends Component {
-
   state = {
     isToday: 65
   };
@@ -15,6 +14,8 @@ class MealWeek extends Component {
     window.print();
   };
 
+  clickHandler = () => {};
+
   render() {
     const { mealPlan } = this.props;
     return (
@@ -22,7 +23,11 @@ class MealWeek extends Component {
         {mealPlan.week.map(day => {
           return (
             <div
-              className={day.day===this.state.isToday ? "mealPlan_day mealPlan_day--today" : "mealPlan_day"}
+              className={
+                day.day === this.state.isToday
+                  ? "mealPlan_day mealPlan_day--today"
+                  : "mealPlan_day"
+              }
               key={day.day}
             >
               <div
@@ -54,6 +59,7 @@ class MealWeek extends Component {
                 </React.Fragment>
               )}
               <div
+                role="button"
                 className={
                   day.meals[0] === "Bod•ē Shake"
                     ? "mealPlan_day--" +
@@ -66,12 +72,14 @@ class MealWeek extends Component {
                 {day.meals[0]}
               </div>
               <div
+                role="button"
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "block" }}
               >
                 {day.meals[1]}
               </div>
               <div
+                role="button"
                 className={
                   day.meals[2] === "Bod•ē Shake"
                     ? "mealPlan_day--" +
@@ -84,12 +92,14 @@ class MealWeek extends Component {
                 {day.meals[2]}
               </div>
               <div
+                role="button"
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "block" }}
               >
                 {day.meals[3]}
               </div>
               <div
+                role="button"
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "block" }}
               >
