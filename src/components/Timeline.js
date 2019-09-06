@@ -5,12 +5,10 @@ class Timeline extends Component {
   render() {
     const { currentWeek } = this.props;
     return (
-      <section className="timeline">
+      <div className="timeline">
         <h3 className="timeline_heading">Your 12 weeks progress</h3>
         <div className="timeline_container">
-          {this.props.weeks.map(item => {
-            console.log(item===currentWeek);
-            
+          {this.props.weeks.map(item => {            
             return (
               <div className="timeline_item" key={item}>
                 <div
@@ -37,7 +35,7 @@ class Timeline extends Component {
             );
           })}
         </div>
-      </section>
+      </div>
     );
   }
 }

@@ -1,0 +1,17 @@
+@import './Variables';
+
+.dashboard_info {
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

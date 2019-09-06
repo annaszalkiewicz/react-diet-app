@@ -4,7 +4,7 @@
   width: 100%;
   font-size: 0.6em;
   padding: 1em;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -38,4 +38,19 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+@media screen and (min-width: 980px) {
+  .timeline {
+    display: flex;
+    width: auto;
+    padding: 1em 1em 1em 0;
+    justify-content: left;
+  }
+  .timeline_heading {
+    width: 100%;
+    margin: 1em 0 -3px 0;
+  }
+  .timeline_container {
+    margin-left: -5px;
+  }
 }
