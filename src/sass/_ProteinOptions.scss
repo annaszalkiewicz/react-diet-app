@@ -29,7 +29,7 @@
 .button_icon {
   &:hover, &:focus {
     opacity: 0.3;
-    transition: all 0.3s ease;
+    transition: $transition;
   }
 }
 @media screen and (min-width: 768px) {

@@ -43,7 +43,7 @@ a {
   width: auto;
   font-size: 1em;
   background: none;
-  transition: all 0.3s ease;
+  transition: $transition;
   &:hover, &:focus {
     border: solid 1px $orange;
     box-shadow: $boxShadow;
