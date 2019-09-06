@@ -33,6 +33,13 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
+            "mealsCompleted": [
+              true,
+              true,
+              true,
+              true,
+              false
+            ],
             "lowCarb": true,
             "free": false,
             "workout": true
@@ -46,6 +53,13 @@
               "Turkey Melt",
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
+            ],
+            "mealsCompleted": [
+              false,
+              false,
+              false,
+              false,
+              false
             ],
             "lowCarb": true,
             "free": false,
@@ -61,6 +75,13 @@
               "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
               "Garlic Lime Chicken (HC)"
             ],
+            "mealsCompleted": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
             "lowCarb": false,
             "free": false,
             "workout": false
@@ -74,6 +95,13 @@
               "Turkey Melt",
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
+            ],
+            "mealsCompleted": [
+              false,
+              false,
+              false,
+              false,
+              false
             ],
             "lowCarb": true,
             "free": false,
@@ -89,6 +117,13 @@
               "Bod•ē Burn with Mozarella and Tomato Slices",
               "Turkey Melt"
             ],
+            "mealsCompleted": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
             "lowCarb": true,
             "free": false,
             "workout": false
@@ -103,6 +138,13 @@
               "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray",
               "Garlic Lime Chicken (HC)"
             ],
+            "mealsCompleted": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
             "lowCarb": false,
             "free": false,
             "workout": false
@@ -111,6 +153,7 @@
             "day": 70,
             "isToday": false,
             "meals": [],
+            "mealsCompleted": [],
             "lowCarb": null,
             "free": true,
             "workout": false
