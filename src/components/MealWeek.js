@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import workout from "../assets/img/table-workout-icon.png";
+import workoutCheck from '../assets/img/workout-check.png';
 import smile from "../assets/img/emoticon-smile.png";
 import print from "../assets/img/print-icon.png";
 import check from '../assets/img/check.png';
@@ -129,7 +130,7 @@ class MealWeek extends Component {
                 style={{ display: day.free ? "none" : "flex" }}
               >
                 <div className="mealPlan_workout--icon">
-                  <img src={workout} alt="Workout" />
+                  <img src={(day.workout) ? workoutCheck : workout} alt="Workout" />
                 </div>
               </div>
             </div>

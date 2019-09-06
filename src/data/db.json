@@ -34,7 +34,8 @@
               "Turkey Melt"
             ],
             "lowCarb": true,
-            "free": false
+            "free": false,
+            "workout": true
           },
           {
             "day": 65,
@@ -47,7 +48,8 @@
               "Turkey Melt"
             ],
             "lowCarb": true,
-            "free": false
+            "free": false,
+            "workout": true
           },
           {
             "day": 66,
@@ -60,7 +62,8 @@
               "Garlic Lime Chicken (HC)"
             ],
             "lowCarb": false,
-            "free": false
+            "free": false,
+            "workout": false
           },
           {
             "day": 67,
@@ -73,7 +76,8 @@
               "Turkey Melt"
             ],
             "lowCarb": true,
-            "free": false
+            "free": false,
+            "workout": false
           },
           {
             "day": 68,
@@ -86,7 +90,8 @@
               "Turkey Melt"
             ],
             "lowCarb": true,
-            "free": false
+            "free": false,
+            "workout": false
           },
           {
             "day": 69,
@@ -99,14 +104,16 @@
               "Garlic Lime Chicken (HC)"
             ],
             "lowCarb": false,
-            "free": false
+            "free": false,
+            "workout": false
           },
           {
             "day": 70,
             "isToday": false,
             "meals": [],
             "lowCarb": null,
-            "free": true
+            "free": true,
+            "workout": false
           }
         ]
       }
