@@ -6,6 +6,8 @@ import workoutCheck from "../assets/img/workout-check.png";
 import smile from "../assets/img/emoticon-smile.png";
 import print from "../assets/img/print-icon.png";
 import check from "../assets/img/check.png";
+import shake from '../assets/img/shake.png';
+import shakeDisabled from '../assets/img/shake-disabled.png';
 
 class MealWeek extends Component {
   state = {
@@ -68,7 +70,10 @@ class MealWeek extends Component {
                       " mealPlan_meal mealPlan_shake"
                     : "mealPlan_day--" + day.day + " mealPlan_meal"
                 }
-                style={{ display: day.free ? "none" : "flex" }}
+                style={{ 
+                  display: day.free ? "none" : "flex", 
+                  backgroundImage: day.meals[0] === "Bod•ē Shake" && this.state.isToday !== day.day ? `url(${shakeDisabled})` : `url(${shake})`
+                }}
               >
                 {day.meals[0]}
                 {day.mealsCompleted[0] === true && (
@@ -79,6 +84,7 @@ class MealWeek extends Component {
                   />
                 )}
               </div>
+
               <div
                 role="button"
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}

@@ -38,7 +38,6 @@
     color: $orange;
   }
   .mealPlan_shake {
-    filter: grayscale(0);
   }
   .mealPlan_meal {
     color: $black;
@@ -65,12 +64,8 @@
   }
 }
 .mealPlan_shake {
-  background: center bottom no-repeat url('../assets/img/shake.png');
-  filter: grayscale(1);
+  background: center bottom no-repeat;
 
-}
-.mealPlan_meal--completed {
-  filter: grayscale(0);
 }
 .mealPlan_carb {
   width: 100%;
