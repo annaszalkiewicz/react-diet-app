@@ -83,14 +83,14 @@ class ProteinOptions extends Component {
               <img
                 src={vegetable}
                 alt="Vegetable option enabled"
-                className="button_icon--vegetables options_vegetable--active"
+                className="button_icon--vegetables button_icon"
               />
             )}
             {!proteinOptions.vegetables && (
               <img
                 src={vagetableDisabled}
                 alt="Vegetable option disabled"
-                className="button_icon--vegetables options_vegetable--inactive"
+                className="button_icon--vegetables button_icon"
               />
             )}
           </button>
@@ -99,14 +99,14 @@ class ProteinOptions extends Component {
               <img
                 src={dairy}
                 alt="Dairy option enabled"
-                className="button_icon--dairy  options_vegetable--active"
+                className="button_icon--dairy  button_icon"
               />
             )}
             {!proteinOptions.dairy && (
               <img
                 src={dairyDisabled}
                 alt="Dairy option disabled"
-                className="button_icon--dairy options_vegetable--inactive"
+                className="button_icon--dairy button_icon"
               />
             )}
           </button>
@@ -115,14 +115,14 @@ class ProteinOptions extends Component {
               <img
                 src={beef}
                 alt="Beef option enabled"
-                className="button_icon--beef options_vegetable--active"
+                className="button_icon--beef button_icon"
               />
             )}
             {!proteinOptions.beef && (
               <img
                 src={beefDisabled}
                 alt="Beef option disabled"
-                className="button_icon--beef options_vegetable--inactive"
+                className="button_icon--beef button_icon"
               />
             )}
           </button>
@@ -131,14 +131,14 @@ class ProteinOptions extends Component {
               <img
                 src={fish}
                 alt="Fish option enabled"
-                className="button_icon--fish options_vegetable--active"
+                className="button_icon--fish button_icon"
               />
             )}
             {!proteinOptions.fish && (
               <img
                 src={fishDisabled}
                 alt="Fish option disabled"
-                className="button_icon--fish options_vegetable--inactive"
+                className="button_icon--fish button_icon"
               />
             )}
           </button>
@@ -147,14 +147,14 @@ class ProteinOptions extends Component {
               <img
                 src={chicken}
                 alt="Chicken option enabled"
-                className="button_icon--chicken options_vegetable--active"
+                className="button_icon--chicken button_icon"
               />
             )}
             {!proteinOptions.chicken && (
               <img
                 src={chickenDisabled}
                 alt="Chicken option disabled"
-                className="button_icon--chicken options_vegetable--inactive"
+                className="button_icon--chicken button_icon"
               />
             )}
           </button>

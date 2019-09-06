@@ -26,6 +26,12 @@
   border: none;
   margin: 0 0.5em;
 }
+.button_icon {
+  &:hover, &:focus {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+  }
+}
 @media screen and (min-width: 768px) {
   .options {
     width: 30%;
