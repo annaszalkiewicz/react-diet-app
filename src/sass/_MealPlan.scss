@@ -6,11 +6,12 @@
   padding: 1em;
 }
 .mealPlan_container {
-  width: 980px;
+  width: 100%;
+  max-width: 980px;
   margin: auto;
   background: #fff;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 .mealPlan_day {
   width: 126px;

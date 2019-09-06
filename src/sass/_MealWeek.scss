@@ -18,8 +18,7 @@
 }
 .mealPlan_overflow {
   display: flex;
-  min-width: 256px;
-  max-width: 896px;
+  width: 256px;
   overflow-x: auto;
 }
 .mealPlan_day {
@@ -136,8 +135,14 @@
     margin-left: 0.5em;
   }
 }
+@media screen and (min-width: 768px) {
+  .mealPlan_overflow {
+    width: 652px;
+  }
+}
 @media screen and (min-width: 980px) {
   .mealPlan_overflow {
+    width: 980px;
     overflow-x: hidden;
   }
 }
