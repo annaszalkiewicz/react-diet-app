@@ -25,6 +25,7 @@
         "week": [
           {
             "day": 64,
+            "isToday": false,
             "meals": [
               "Bod•ē Shake",
               "Ham and Swiss Roll ups",
@@ -37,6 +38,7 @@
           },
           {
             "day": 65,
+            "isToday": true,
             "meals": [
               "Bod•ē Shake",
               "Ham and Swiss Roll ups",
@@ -49,6 +51,7 @@
           },
           {
             "day": 66,
+            "isToday": false,
             "meals": [
               "Bod•ē Shake",
               "Grilled Steak (HC)",
@@ -61,6 +64,7 @@
           },
           {
             "day": 67,
+            "isToday": false,
             "meals": [
               "Bod•ē Shake",
               "Ham and Swiss Roll ups",
@@ -73,6 +77,7 @@
           },
           {
             "day": 68,
+            "isToday": false,
             "meals": [
               "Bod•ē Shake",
               "Ham and Swiss Roll ups",
@@ -85,6 +90,7 @@
           },
           {
             "day": 69,
+            "isToday": false,
             "meals": [
               "Bod•ē Shake",
               "Grilled Steak (HC)",
@@ -97,6 +103,7 @@
           },
           {
             "day": 70,
+            "isToday": false,
             "meals": [],
             "lowCarb": null,
             "free": true

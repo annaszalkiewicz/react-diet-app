@@ -3,13 +3,17 @@ import { connect } from "react-redux";
 
 import workout from "../assets/img/table-workout-icon.png";
 import smile from "../assets/img/emoticon-smile.png";
-import print from '../assets/img/print-icon.png';
+import print from "../assets/img/print-icon.png";
 
 class MealWeek extends Component {
 
+  state = {
+    isToday: 65
+  };
+
   printHandler = () => {
     window.print();
-  }
+  };
 
   render() {
     const { mealPlan } = this.props;
@@ -17,7 +21,10 @@ class MealWeek extends Component {
       <div className="mealPlan_overflow">
         {mealPlan.week.map(day => {
           return (
-            <div className="mealPlan_day" key={day.day}>
+            <div
+              className={day.day===this.state.isToday ? "mealPlan_day mealPlan_day--today" : "mealPlan_day"}
+              key={day.day}
+            >
               <div
                 className={
                   day.free === true
@@ -37,9 +44,12 @@ class MealWeek extends Component {
                       <img src={smile} alt="Smile" />
                     </div>
                   </div>
-                  <button className="mealPlan_print" onClick={this.printHandler}>
-                      <img src={print} alt="Print page"/>
-                      <h3>Print</h3>
+                  <button
+                    className="mealPlan_print"
+                    onClick={this.printHandler}
+                  >
+                    <img src={print} alt="Print page" />
+                    <h3>Print</h3>
                   </button>
                 </React.Fragment>
               )}
@@ -51,11 +61,14 @@ class MealWeek extends Component {
                       " mealPlan_meal mealPlan_shake"
                     : "mealPlan_day--" + day.day + " mealPlan_meal"
                 }
-                style={{display: day.free ? 'none' : 'block'}}
+                style={{ display: day.free ? "none" : "block" }}
               >
                 {day.meals[0]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
+              <div
+                className={"mealPlan_day--" + day.day + " mealPlan_meal"}
+                style={{ display: day.free ? "none" : "block" }}
+              >
                 {day.meals[1]}
               </div>
               <div
@@ -66,17 +79,26 @@ class MealWeek extends Component {
                       " mealPlan_meal mealPlan_shake"
                     : "mealPlan_day--" + day.day + " mealPlan_meal"
                 }
-                style={{display: day.free ? 'none' : 'block'}}
+                style={{ display: day.free ? "none" : "block" }}
               >
                 {day.meals[2]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
+              <div
+                className={"mealPlan_day--" + day.day + " mealPlan_meal"}
+                style={{ display: day.free ? "none" : "block" }}
+              >
                 {day.meals[3]}
               </div>
-              <div className={"mealPlan_day--" + day.day + " mealPlan_meal"} style={{display: day.free ? 'none' : 'block'}}>
+              <div
+                className={"mealPlan_day--" + day.day + " mealPlan_meal"}
+                style={{ display: day.free ? "none" : "block" }}
+              >
                 {day.meals[4]}
               </div>
-              <div className="mealPlan_carb" style={{display: day.free ? 'none' : 'block'}}>
+              <div
+                className="mealPlan_carb"
+                style={{ display: day.free ? "none" : "block" }}
+              >
                 {day.lowCarb && (
                   <div className="mealPlan_carb--low">low-carb</div>
                 )}
@@ -84,7 +106,10 @@ class MealWeek extends Component {
                   <div className="mealPlan_carb--low">high-carb</div>
                 )}
               </div>
-              <div className="mealPlan_workout" style={{display: day.free ? 'none' : 'flex'}}>
+              <div
+                className="mealPlan_workout"
+                style={{ display: day.free ? "none" : "flex" }}
+              >
                 <div className="mealPlan_workout--icon">
                   <img src={workout} alt="Workout" />
                 </div>
