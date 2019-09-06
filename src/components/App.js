@@ -8,8 +8,6 @@ import { logIn } from "../store/actions/authActions";
 import "../sass/_App.scss";
 import Header from "./Header";
 import Dashboard from "./Dashboard";
-import Recipes from "./Recipes";
-import Challenge from "./Challenge";
 import Home from "./Home";
 import Footer from "./Footer";
 
@@ -42,16 +40,6 @@ class App extends Component {
             <Route
               path={process.env.PUBLIC_URL + "/dashboard"}
               render={() => <Dashboard />}
-            />
-
-            <Route
-              path={process.env.PUBLIC_URL + "/recipes"}
-              render={() => <Recipes />}
-            />
-
-            <Route
-              path={process.env.PUBLIC_URL + "/challenge"}
-              render={() => <Challenge />}
             />
           </main>
 

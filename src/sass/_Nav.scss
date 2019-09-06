@@ -75,6 +75,9 @@
     }
 }
 }
+.disabled {
+  cursor: not-allowed;
+}
 @keyframes openNav {
   0% {
     transform: translateX(-1000px);

@@ -9,10 +9,10 @@ class Nav extends Component {
   render() {
    
     return (
-      <nav className={this.props.navIsOpen ? "header_menu--open" : "header_menu--closed"} onClick={this.props.toggleNav}>
-        <NavLink exact to="/dashboard" className="header_menu--item">Dashboard</NavLink>
-        <NavLink exact to="/recipes" className="header_menu--item">Recipes</NavLink>
-        <NavLink exact to="/challenge" className="header_menu--item">Challenge</NavLink>
+      <nav className={this.props.navIsOpen ? "header_menu--open" : "header_menu--closed"} >
+        <NavLink to="/dashboard" className="header_menu--item" onClick={this.props.toggleNav}>Dashboard</NavLink>
+        <div className="header_menu--item disabled">Recipes</div>
+        <div className="header_menu--item  disabled">Challenge</div>
       </nav>
     );
   }
