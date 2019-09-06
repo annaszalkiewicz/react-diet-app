@@ -49,7 +49,8 @@
   width: 100%;
   height: 90px;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: baseline;
   background-color: $white;
   padding: 0.85em 0.85em 0 0.85em;
   font-size: 0.9em;
@@ -63,9 +64,16 @@
     color: $black;
   }
 }
+.mealPlan_meal--completed {
+  display: none;
+  filter: grayscale(0);
+}
 .mealPlan_shake {
   background: center bottom no-repeat url('../assets/img/shake.png');
   filter: grayscale(1);
+  .mealPlan_meal--completed {
+    filter: grayscale(0);
+  }
 }
 .mealPlan_carb {
   width: 100%;
