@@ -15,8 +15,6 @@ class MealWeek extends Component {
     window.print();
   };
 
-  clickHandler = () => {};
-
   render() {
     const { mealPlan } = this.props;
     return (
