@@ -60,6 +60,12 @@
   &:hover, &:focus {
     color: $black;
   }
+  p {
+    width: 80%;
+  }
+  img {
+    width: 19%;
+  }
 }
 .mealPlan_shake {
   background: center bottom no-repeat;

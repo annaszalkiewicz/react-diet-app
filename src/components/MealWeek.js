@@ -75,7 +75,7 @@ class MealWeek extends Component {
                   backgroundImage: day.meals[0] === "Bod•ē Shake" && this.state.isToday !== day.day ? `url(${shakeDisabled})` : `url(${shake})`
                 }}
               >
-                {day.meals[0]}
+                <p>{day.meals[0]}</p>
                 {day.mealsCompleted[0] === true && (
                   <img
                     src={check}
@@ -90,7 +90,7 @@ class MealWeek extends Component {
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "flex" }}
               >
-                {day.meals[1]}
+                <p>{day.meals[1]}</p>
                 {day.mealsCompleted[1] === true && (
                   <img
                     src={check}
@@ -110,7 +110,7 @@ class MealWeek extends Component {
                 }
                 style={{ display: day.free ? "none" : "flex" }}
               >
-                {day.meals[2]}
+                <p>{day.meals[2]}</p>
                 {day.mealsCompleted[2] === true && (
                   <img
                     src={check}
@@ -124,7 +124,7 @@ class MealWeek extends Component {
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "flex" }}
               >
-                {day.meals[3]}
+                <p>{day.meals[3]}</p>
                 {day.mealsCompleted[3] === true && (
                   <img
                     src={check}
@@ -138,7 +138,7 @@ class MealWeek extends Component {
                 className={"mealPlan_day--" + day.day + " mealPlan_meal"}
                 style={{ display: day.free ? "none" : "flex" }}
               >
-                {day.meals[4]}
+                <p>{day.meals[4]}</p>
                 {day.mealsCompleted[4] === true && (
                   <img
                     src={check}
