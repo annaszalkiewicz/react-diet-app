@@ -1,15 +1,14 @@
 import {
   SET_CURRENT_WEEK,
   SET_PLAN_DURATION,
-  GET_MEAL_PLAN,
-  SET_PROTEIN_OPTIONS
+  GET_MEAL_PLAN
 } from "../actions/actionTypes";
 import data from "../../data/db.json";
 
 const initialState = {
   currentWeek: null,
   weeks: [],
-  mealPlan: data.users[0].mealPlan,
+  mealPlan: data.users[0].mealPlan
 };
 
 const userReducer = (state = initialState, action) => {
@@ -37,20 +36,7 @@ const userReducer = (state = initialState, action) => {
         ...state,
         mealPlan: data.users[0].mealPlan
       };
-    
-    case SET_PROTEIN_OPTIONS:
-      return {
-        ...state,
-        mealPlan: {
-          proteinOptions: {
-            "vegetables": true,
-            "dairy": true,
-            "beef": true,
-            "fish": false,
-            "chicken": false
-          }
-        }
-      }
+
     default:
       return state;
   }

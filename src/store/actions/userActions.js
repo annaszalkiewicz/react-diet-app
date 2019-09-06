@@ -1,8 +1,7 @@
 import {
   SET_CURRENT_WEEK,
   SET_PLAN_DURATION,
-  GET_MEAL_PLAN,
-  SET_PROTEIN_OPTIONS
+  GET_MEAL_PLAN
 } from "./actionTypes";
 
 export const setCurrentWeek = () => {
@@ -20,11 +19,5 @@ export const setPlanDuration = () => {
 export const getMealPlan = () => {
   return {
     type: GET_MEAL_PLAN
-  };
-};
-
-export const setProteinOptions = () => {
-  return {
-    type: SET_PROTEIN_OPTIONS
   };
 };
