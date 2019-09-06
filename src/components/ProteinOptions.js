@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-import { setProteinOptions } from "../store/actions/userActions";
-
+import data from "../data/db.json";
 import vegetable from "../assets/img/vegetables.png";
 import vagetableDisabled from "../assets/img/vegetables-disabled.png";
 import dairy from "../assets/img/dairy.png";
@@ -15,98 +13,148 @@ import fish from "../assets/img/fish.png";
 import fishDisabled from "../assets/img/fish-disabled.png";
 
 class ProteinOptions extends Component {
-  componentDidMount = () => {
-    this.props.setProteinOptions();
+  state = {
+    proteinOptions: {
+      vegetables: data.users[0].proteinOptions.vegetables,
+      dairy: data.users[0].proteinOptions.dairy,
+      beef: data.users[0].proteinOptions.beef,
+      fish: data.users[0].proteinOptions.fish,
+      chicken: data.users[0].proteinOptions.chicken
+    }
   };
 
   clickHandler = e => {
-    if (e.target.classList.contains("options_button")) {
+    if (e.target.classList.contains("button_icon--vegetables")) {
+      this.setState(prevState => {
+        return {
+          proteinOptions: {
+            ...prevState.proteinOptions,
+            vegetables: !prevState.proteinOptions.vegetables
+          }
+        };
+      });
+    } else if (e.target.classList.contains("button_icon--dairy")) {
+      this.setState(prevState => {
+        return {
+          proteinOptions: {
+            ...prevState.proteinOptions,
+            dairy: !prevState.proteinOptions.dairy
+          }
+        };
+      });
+    } else if (e.target.classList.contains("button_icon--beef")) {
+      this.setState(prevState => {
+        return {
+          proteinOptions: {
+            ...prevState.proteinOptions,
+            beef: !prevState.proteinOptions.beef
+          }
+        };
+      });
+    } else if (e.target.classList.contains("button_icon--fish")) {
+      this.setState(prevState => {
+        return {
+          proteinOptions: {
+            ...prevState.proteinOptions,
+            fish: !prevState.proteinOptions.fish
+          }
+        };
+      });
+    } else {
+      this.setState(prevState => {
+        return {
+          proteinOptions: {
+            ...prevState.proteinOptions,
+            chicken: !prevState.proteinOptions.chicken
+          }
+        };
+      });
     }
-    return;
   };
+
   render() {
-    const { mealPlan } = this.props;
+    const { proteinOptions } = this.state;
     return (
       <section className="options">
         <h3 className="options_header">Select your protein options</h3>
         <div className="options_buttons" onClick={e => this.clickHandler(e)}>
           <button className="options_button">
-            {mealPlan.proteinOptions.vegetables && (
+            {proteinOptions.vegetables && (
               <img
                 src={vegetable}
                 alt="Vegetable option enabled"
-                className="options_vegetable--active"
+                className="button_icon--vegetables options_vegetable--active"
               />
             )}
-            {!mealPlan.proteinOptions.vegetables && (
+            {!proteinOptions.vegetables && (
               <img
                 src={vagetableDisabled}
                 alt="Vegetable option disabled"
-                className="options_vegetable--inactive"
+                className="button_icon--vegetables options_vegetable--inactive"
               />
             )}
           </button>
           <button className="options_button">
-            {mealPlan.proteinOptions.dairy && (
+            {proteinOptions.dairy && (
               <img
                 src={dairy}
                 alt="Dairy option enabled"
-                className="options_vegetable--active"
+                className="button_icon--dairy  options_vegetable--active"
               />
             )}
-            {!mealPlan.proteinOptions.dairy && (
+            {!proteinOptions.dairy && (
               <img
                 src={dairyDisabled}
                 alt="Dairy option disabled"
-                className="options_vegetable--inactive"
+                className="button_icon--dairy options_vegetable--inactive"
               />
             )}
           </button>
           <button className="options_button">
-            {mealPlan.proteinOptions.beef && (
+            {proteinOptions.beef && (
               <img
                 src={beef}
                 alt="Beef option enabled"
-                className="options_vegetable--active"
+                className="button_icon--beef options_vegetable--active"
               />
             )}
-            {!mealPlan.proteinOptions.beef && (
+            {!proteinOptions.beef && (
               <img
                 src={beefDisabled}
                 alt="Beef option disabled"
-                className="options_vegetable--inactive"
+                className="button_icon--beef options_vegetable--inactive"
               />
             )}
           </button>
           <button className="options_button">
-            {mealPlan.proteinOptions.fish && (
+            {proteinOptions.fish && (
               <img
                 src={fish}
                 alt="Fish option enabled"
-                className="options_vegetable--active"
+                className="button_icon--fish options_vegetable--active"
               />
             )}
-            {!mealPlan.proteinOptions.fish && (
+            {!proteinOptions.fish && (
               <img
                 src={fishDisabled}
                 alt="Fish option disabled"
-                className="options_vegetable--inactive"
+                className="button_icon--fish options_vegetable--inactive"
               />
             )}
           </button>
           <button className="options_button">
-            {mealPlan.proteinOptions.chicken && (
+            {proteinOptions.chicken && (
               <img
                 src={chicken}
                 alt="Chicken option enabled"
-                className="options_vegetable--active"
+                className="button_icon--chicken options_vegetable--active"
               />
             )}
-            {!mealPlan.proteinOptions.chicken && (
+            {!proteinOptions.chicken && (
               <img
                 src={chickenDisabled}
                 alt="Chicken option disabled"
-                className="options_vegetable--inactive"
+                className="button_icon--chicken options_vegetable--inactive"
               />
             )}
           </button>
@@ -116,19 +164,4 @@ class ProteinOptions extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    mealPlan: state.userReducer.mealPlan
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setProteinOptions: () => dispatch(setProteinOptions())
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ProteinOptions);
+export default ProteinOptions;
