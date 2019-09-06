@@ -43,6 +43,11 @@ a {
   width: auto;
   font-size: 1em;
   background: none;
+  transition: all 0.3s ease;
+  &:hover, &:focus {
+    border: solid 1px $orange;
+    box-shadow: $boxShadow;
+  }
 }
 .button_primary--icon {
   margin-right: 0.5em;
